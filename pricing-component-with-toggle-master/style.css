@@ -1,0 +1,257 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background: hsl(240, 78%, 98%);
+}
+
+h1 {
+    font-size: 1.5rem;
+    padding: 40px;
+    color:  hsl(233, 13%, 49%);
+}
+
+.hr-line {
+  width: 80%;
+  height: 1px;
+  background-color: hsla(234, 14%, 74%, .5);
+  margin: 0 auto;
+}
+
+.toggle {
+    display: flex;
+    place-items: center;
+    padding-bottom: 40px;
+}
+
+
+.toggle-labels {
+    font-size: .8rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: hsl(234, 14%, 74%);
+}
+
+.plan-features {
+    font-size: .7rem;
+    color: hsl(233, 13%, 49%);
+}
+
+.pro-features {
+  color: #fff;
+}
+
+.card-heading {
+    font-size: 1rem;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    color:  hsl(233, 13%, 49%);
+}
+
+.pro-heading {
+  color: #fff;
+}
+
+.monthly-price {
+    display: block;
+    font-size: 3.5rem;
+    color: hsl(232, 13%, 33%);
+}
+
+.annual-price {
+    display: none;
+    font-size: 3.5rem;
+    color: hsl(232, 13%, 33%);
+}
+
+.pro-annual-price {
+  color: #fff;
+}
+
+.pro-monthly-price {
+  color: #fff;
+}
+
+/* .card-wrapper {
+    width: 100%;
+} */
+
+.basic-card,
+.master-card,
+.pro-card {
+    display: grid;
+    border-radius: 10px;
+    margin: 25px;
+    min-width: 275px;
+    height: 375px;
+    box-shadow: 2px 2px 20px 2px hsla(236, 72%, 79%, .3); 
+}
+
+.basic-card,
+.master-card {
+    background: #fff;
+}
+
+.basic-heading,
+.master-heading {
+  color: hsl(232, 13%, 33%);
+}
+
+.pro-card {
+    background: linear-gradient(hsla(236, 72%, 79%, 1), hsla(237, 63%, 64%, 1));
+    color: #fff;
+}
+
+.basic-btn,
+.pro-btn,
+.master-btn {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding: 5px 30px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: .6rem;
+    letter-spacing: 1px;
+    color: #fff;
+    background: linear-gradient(hsla(236, 72%, 79%, 1), hsla(237, 63%, 64%, 1));
+    border: 0;
+    border-radius: 5px;
+}
+
+.basic-btn:hover,
+.master-btn:hover {
+  color: hsla(237, 63%, 64%, 1);
+  background: #fff;
+  padding: 4px 29px;
+  border: 1px solid hsl(232, 13%, 33%);
+}
+
+.pro-btn:hover {
+  color: #fff;
+  background: hsla(237, 63%, 64%, 0);
+  padding: 4px 29px;
+  border: 1px solid hsl(240, 78%, 98%);
+}
+
+.pro-btn {
+  background: #fff;
+  color: hsla(237, 63%, 64%, 1);
+}
+
+
+/* Borrowed toggle animation from w3schools and tweaked a few things... hey i gotta learn from somewhere  */
+/* Annoying that you can't use linear gradient with transitions */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(236, 72%, 79%);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:hover {
+    opacity: .4;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: auto;
+    right: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 1px 1px 10px hsl(237, 63%, 64%);
+  }
+  
+  input:checked + .slider {
+    background-color: hsl(236, 72%, 79%);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(-26px);
+    -ms-transform: translateX(-26px);
+    transform: translateX(-26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  @media (min-width: 845px) {
+    .card-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .basic-card,
+    .master-card,
+    .pro-card {
+      margin: 0;
+    }
+
+    .basic-card{
+      border-radius: 10px 0 0 10px;
+    }
+
+    .master-card {
+      border-radius: 0 10px 10px 0;
+    }
+
+    .pro-card {
+      height: 410px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    
+  }
